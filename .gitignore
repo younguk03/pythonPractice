@@ -1,0 +1,21 @@
+# homework1
+cm, mm, m, inchi = 1, 10, 0.01, 0.39
+
+print("-"*30)
+print("  cm     mm     m      inchi")
+print("-"*30)
+for i in range(1, 51):
+  print("%3d %7d %7.2f %7.2f" %(cm*i, mm*i, m*i, inchi*i))
+print("-"*30)
+
+
+# homeowrk2
+first = int(input("시작수: "))
+final = int(input("마지막수: "))
+
+for i in range(first, final+1):
+  num = 0
+  for j in range(2, i//2, -1):
+    if i%j==0: num +=1
+  if num != 0:
+    print(i, end=' ')
