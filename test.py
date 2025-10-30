@@ -1,10 +1,19 @@
-start_num = int(input('시작 수를 입력해주세요 : '))
-end_num = int(input('끝 수를 입력해주세요 : '))
+n1 = int(input())
+n2 = int(input())
+max_num = {}
 
-for i in range(start_num, end_num):
-    num = 0
-    for s in range(2, i - 1):
-        if i % s == 0:
-            num += 1
-    if num == 0:
-        print(i, end = ' ')
+for i in range(n1, n2+1):
+    a = 0
+    if i %2 == 0:
+        continue
+    while True:
+        a += 1
+        if i%2 == 0:
+            i = i//2
+        else:
+            i = i*3 + 1
+        if i == 1:
+            max_num[a] = i
+            break
+
+# 10, 5, 16, 8, 4, 2, 1
